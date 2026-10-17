@@ -6,6 +6,13 @@ L'Oréal Groupe 旗下 **12 个护肤品牌** 的介绍网页。首页是一张�
 
 ---
 
+## 在线地址
+
+- 站点：**https://theo-wang-11.github.io/loreal-skin-atlas/**
+- 仓库：**https://github.com/Theo-wang-11/loreal-skin-atlas**
+
+已通过 GitHub Pages 发布（`main` 分支根目录，仓库内含 `.nojekyll`）。后续推送到 `main` 即自动更新。
+
 ## 打开方式
 
 无需安装、无需构建，**直接双击 `index.html`** 即可。
