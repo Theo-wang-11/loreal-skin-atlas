@@ -1263,3 +1263,137 @@ body[data-view="brand"] .brand-root { display: block; }
 
 /* taglines get a slightly longer measure so short lines don't split a word */
 .b-position { max-width: 18.5em; }
+
+/* ── H. TAKAMI / CARITA ────────────────────────────────── */
+[data-brand="takami"] {
+  --brand-bg: #f5f9fc; --brand-ink: #0d2735; --brand-accent: #2f7fb5; --brand-accent-2: #9fc9dd;
+  --brand-muted: rgba(13, 39, 53, .6); --brand-line: rgba(13, 39, 53, .14); --brand-surface: #ffffff;
+  --brand-display: 'IBM Plex Sans', sans-serif; --brand-cn: 'Noto Sans SC', sans-serif;
+  --brand-body: 'Noto Sans SC', sans-serif;
+  --brand-mark-ls: .3em; --brand-mark-weight: 300; --brand-mark-size: clamp(30px, 5.4vw, 80px);
+}
+[data-brand="carita"] {
+  --brand-bg: #f3ede3; --brand-ink: #1c1712; --brand-accent: #a37d3f; --brand-accent-2: #6b4a2f;
+  --brand-muted: rgba(28, 23, 18, .62); --brand-line: rgba(28, 23, 18, .18); --brand-surface: #faf5ec;
+  --brand-display: 'Bodoni Moda', serif; --brand-cn: 'Noto Serif SC', serif;
+  --brand-mark-ls: .18em; --brand-mark-size: clamp(34px, 5.8vw, 92px);
+}
+
+/* art: takami — water / ripple */
+.art-ripple {
+  background:
+    radial-gradient(46% 42% at 70% 38%, rgba(47, 127, 181, .2), transparent 70%),
+    repeating-radial-gradient(circle at 70% 38%, transparent 0 38px, rgba(47, 127, 181, .11) 38px 39px),
+    linear-gradient(180deg, #f9fcfe, #e4f1f9);
+}
+.art-ripple::before {
+  content: ''; position: absolute; left: 70%; top: 38%; width: clamp(150px, 21vw, 300px); aspect-ratio: 1;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  border: 1px solid rgba(47, 127, 181, .42);
+  box-shadow: 0 0 0 28px rgba(47, 127, 181, .05), 0 0 0 56px rgba(47, 127, 181, .028);
+}
+.art-ripple::after { background: linear-gradient(180deg, transparent 52%, rgba(245, 249, 252, .96) 100%); }
+.b-hero-art.art-ripple::before { left: 74%; top: 40%; }
+.c-art.art-ripple::before { left: 50%; top: 38%; }
+
+/* art: carita — place vendôme / column */
+.art-vendome {
+  background:
+    repeating-linear-gradient(90deg, rgba(176, 141, 79, .07) 0 1px, transparent 1px 92px),
+    radial-gradient(44% 40% at 70% 16%, rgba(176, 141, 79, .16), transparent 70%),
+    linear-gradient(180deg, #f8f2e8, #e9dfd0);
+}
+.art-vendome::before {
+  content: ''; position: absolute; left: 72%; bottom: 0; width: min(20%, 220px); height: 72%;
+  transform: translateX(-50%);
+  background:
+    repeating-linear-gradient(90deg, rgba(107, 74, 47, .16) 0 1px, transparent 1px 10px),
+    linear-gradient(90deg, rgba(176, 141, 79, .18), rgba(176, 141, 79, .62) 26%, rgba(176, 141, 79, .32) 52%, rgba(176, 141, 79, .62) 76%, rgba(176, 141, 79, .18));
+  clip-path: polygon(0 100%, 0 92%, 12% 92%, 12% 16%, 6% 16%, 6% 8%, 20% 8%, 20% 0, 80% 0, 80% 8%, 94% 8%, 94% 16%, 88% 16%, 88% 92%, 100% 92%, 100% 100%);
+  opacity: .85;
+}
+.art-vendome::after { background: linear-gradient(180deg, transparent 54%, rgba(243, 237, 227, .95) 100%); }
+.c-art.art-vendome::before { left: 50%; width: min(24%, 240px); }
+.b-hero-art.art-vendome::before {
+  display: block; left: auto; right: 8%; top: 4%; bottom: auto;
+  width: clamp(140px, 18vw, 250px); height: auto; aspect-ratio: 1;
+  transform: none; border-radius: 50%; background: none; clip-path: none;
+  border: 1px solid rgba(163, 125, 63, .24);
+  box-shadow: 0 0 0 20px rgba(163, 125, 63, .03);
+  opacity: 1;
+}
+
+/* stage motifs */
+.motif-ripple {
+  background:
+    radial-gradient(50% 44% at 50% 36%, color-mix(in srgb, var(--brand-accent) 18%, transparent), transparent 72%),
+    repeating-radial-gradient(circle at 50% 36%, transparent 0 30px, color-mix(in srgb, var(--brand-accent) 11%, transparent) 30px 31px),
+    var(--brand-bg);
+}
+.motif-ripple::before {
+  left: 50%; top: 36%; width: 46%; aspect-ratio: 1; transform: translate(-50%, -50%);
+  border-radius: 50%; border: 1px solid color-mix(in srgb, var(--brand-accent) 40%, transparent);
+  box-shadow: 0 0 0 18px color-mix(in srgb, var(--brand-accent) 5%, transparent);
+}
+.motif-vendome {
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--brand-accent) 12%, transparent) 0 1px, transparent 1px 64px),
+    radial-gradient(48% 42% at 76% 16%, color-mix(in srgb, var(--brand-accent) 18%, transparent), transparent 70%),
+    var(--brand-bg);
+}
+.motif-vendome::before {
+  right: 10%; top: 9%; width: 28%; aspect-ratio: 1; border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--brand-accent) 45%, transparent);
+  box-shadow: 0 0 0 14px color-mix(in srgb, var(--brand-accent) 5%, transparent);
+}
+
+/* layout: minimal (takami) */
+[data-layout="minimal"] .b-hero { min-height: min(90svh, 900px); }
+[data-layout="minimal"] .b-hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(250px, .55fr); }
+[data-layout="minimal"] .b-mark { font-weight: 300; letter-spacing: .32em; }
+[data-layout="minimal"] .b-cn { letter-spacing: .5em; }
+[data-layout="minimal"] .b-position {
+  font-family: var(--brand-body); font-weight: 300; letter-spacing: .06em; line-height: 1.7;
+}
+[data-layout="minimal"] .b-hero-aside { border-left: 1px solid var(--brand-line); padding-left: clamp(16px, 2.4vw, 32px); }
+[data-layout="minimal"] .b-facts { border-top: 0; }
+[data-layout="minimal"] .b-facts > div { grid-template-columns: 1fr; gap: 2px; padding: 11px 0; }
+[data-layout="minimal"] .b-facts dt { color: var(--brand-accent); font-size: 8px; }
+[data-layout="minimal"] .b-facts dd { font-size: 11.5px; }
+[data-layout="minimal"] .b-manifesto blockquote { font-family: var(--brand-body); font-weight: 300; font-size: clamp(18px, 2.2vw, 30px); line-height: 1.9; }
+[data-layout="minimal"] .p-card { border-top: 1px solid var(--brand-line); padding-top: 18px; }
+[data-layout="minimal"] .p-visual { background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--brand-accent) 8%, transparent)); }
+[data-layout="minimal"] .p-en { font-family: var(--brand-mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+[data-layout="minimal"] .c-title { font-family: var(--brand-display); font-weight: 300; letter-spacing: .16em; text-transform: uppercase; font-size: clamp(28px, 3.2vw, 48px); }
+[data-layout="minimal"] .c-sub { font-family: var(--brand-cn); letter-spacing: .3em; }
+[data-layout="minimal"] .b-next-mark { font-weight: 300; letter-spacing: .14em; }
+
+/* layout: atelier (carita) */
+[data-layout="atelier"] .b-hero { min-height: min(90svh, 900px); }
+[data-layout="atelier"] .b-hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(270px, .62fr); }
+[data-layout="atelier"] .b-mark { font-family: 'Bodoni Moda', serif; letter-spacing: .18em; }
+[data-layout="atelier"] .b-cn { letter-spacing: .5em; color: var(--brand-accent); }
+[data-layout="atelier"] .b-position { font-family: var(--brand-cn); font-weight: 300; }
+[data-layout="atelier"] .b-hero-aside { border-top: 1px solid var(--brand-accent); padding-top: 18px; }
+[data-layout="atelier"] .b-facts { border-top: 0; }
+[data-layout="atelier"] .b-facts > div { grid-template-columns: 1fr; gap: 2px; }
+[data-layout="atelier"] .b-facts dt { color: var(--brand-accent); }
+[data-layout="atelier"] .b-manifesto blockquote { font-family: var(--brand-cn); font-weight: 300; max-width: 26ch; letter-spacing: .06em; }
+[data-layout="atelier"] .p-card { border: 1px solid var(--brand-line); background: var(--brand-surface); padding: clamp(14px, 1.6vw, 22px); }
+[data-layout="atelier"] .p-visual { background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--brand-accent) 10%, transparent)); }
+[data-layout="atelier"] .p-en { font-family: var(--brand-display); font-size: 12px; letter-spacing: .12em; }
+[data-layout="atelier"] .p-price { font-family: 'Bodoni Moda', serif; }
+[data-layout="atelier"] .c-art { aspect-ratio: 4 / 4.2; }
+[data-layout="atelier"] .c-title { font-family: 'Bodoni Moda', serif; }
+[data-layout="atelier"] .c-sub { font-family: var(--brand-cn); letter-spacing: .4em; }
+[data-layout="atelier"] .b-next { background: var(--brand-surface); }
+[data-layout="atelier"] .b-next-mark { font-family: 'Bodoni Moda', serif; }
+
+@media (max-width: 900px) {
+  [data-layout="minimal"] .b-hero-grid,
+  [data-layout="atelier"] .b-hero-grid { grid-template-columns: 1fr; }
+  [data-layout="minimal"] .b-hero-aside {
+    border-left: 0; padding-left: 0; border-top: 1px solid var(--brand-line); padding-top: 18px;
+  }
+  [data-layout="atelier"] .p-card { padding: 14px; }
+}

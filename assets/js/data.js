@@ -9,10 +9,10 @@ window.ATLAS = {
   title: ['肌肤', '图谱'],
   titleEn: 'The Skin Atlas',
   intro:
-    '从巴黎的玫瑰园，到纽约第三大道的药房；从火山温泉水，到实验室里的抗氧化配方。十二间护肤屋，十二种关于「好皮肤」的答案。',
-  meta: ['十二间护肤屋', '一九〇九 — 今', '巴黎 · 纽约 · 墨尔本'],
+    '从巴黎的玫瑰园，到纽约第三大道的药房；从东京的角质诊所，到旺多姆广场的沙龙。十四间护肤屋，十四种关于「好皮肤」的答案。',
+  meta: ['十四间护肤屋', '一九〇九 — 今', '巴黎 · 纽约 · 墨尔本 · 东京'],
   statement:
-    '美从来不是单一的配方。这里收录的是同一集团之下，十二种截然不同的皮肤哲学——它们彼此不重复，也彼此不妥协。',
+    '美从来不是单一的配方。这里收录的是同一集团之下，十四种截然不同的皮肤哲学——它们彼此不重复，也彼此不妥协。',
   note:
     '本页面为设计概念作品。品牌名称与商标归 L’Oréal Groupe 及各品牌所有；产品、价格与 campaign 文字为创意示意，非官方发布。',
   brands: [
@@ -769,6 +769,132 @@ window.ATLAS = {
           '在一座江南老宅里，拍灵芝、拍水、拍一双手把精华按进皮肤。羽西把「养」拍成一种节奏：慢，但有方向。',
         meta: ['品牌企划', '2024 年度', '影像：中国 · 江南'],
         art: 'seal'
+      }
+    },
+
+    /* ── 13 ───────────────────────────────────────────── */
+    {
+      id: 'takami',
+      no: '13',
+      en: 'TAKAMI',
+      cn: '塔卡米',
+      category: '日式角质护理',
+      origin: 'TOKYO',
+      year: '1999',
+      colors: { bg: '#f5f9fc', ink: '#0d2735', accent: '#2f7fb5' },
+      emblem: 'droplet',
+      motif: 'ripple',
+      tagline: '先调理角质，再谈其他。',
+      intro:
+        '1999 年，高见医生在东京开设美容皮肤科诊所。他发现许多肌肤问题并不来自「缺」，而是来自角质代谢的停滞。于是他把诊所里的温和焕肤，做成了一瓶可以带回家的蓝色精华。2021 年，TAKAMI 加入 L’Oréal Groupe。',
+      manifesto:
+        '不追求一次性的剥脱，而是让角质层回到它原本的代谢节奏。三分钟，三滴，日复一日。',
+      quoteBy: 'TAKAMI · TOKYO',
+      facts: [
+        { k: '起源', v: '东京 · 1999' },
+        { k: '灵魂成分', v: '果酸复合物 · 氨基酸' },
+        { k: '代表系列', v: 'Skin Peel · Lotion' }
+      ],
+      products: [
+        {
+          cn: '小蓝瓶角质调理精华',
+          en: 'Skin Peel',
+          desc: '温和果酸复合配方，调理角质代谢。洁面后的第一步，停留三分钟，再继续后续保养。',
+          size: '30 ML',
+          price: '¥ 399',
+          kind: 'dropper',
+          palette: { body: '#cfe7f5', cap: '#2f7fb5', label: '#ffffff', labelInk: '#0d2735', liquid: '#a9d3e9' }
+        },
+        {
+          cn: '小蓝瓶保湿化妆水',
+          en: 'Lotion',
+          desc: '与精华同系列的清爽化妆水，补水而不黏腻，为下一步留出干净的底色。',
+          size: '120 ML',
+          price: '¥ 329',
+          kind: 'flacon',
+          palette: { body: '#e6f3fa', cap: '#2f7fb5', label: '#ffffff', labelInk: '#0d2735', liquid: '#cfe7f5' }
+        },
+        {
+          cn: '氨基酸温和洁面',
+          en: 'Cleansing Gel',
+          desc: '氨基酸表活，洗去多余角质与皮脂，洗后不紧绷。日式清洁的「刚刚好」。',
+          size: '120 G',
+          price: '¥ 259',
+          kind: 'tube',
+          palette: { body: '#ffffff', cap: '#2f7fb5', label: '#f4fafd', labelInk: '#0d2735', liquid: '#ffffff' }
+        }
+      ],
+      campaign: {
+        kicker: 'CAMPAIGN · 2024',
+        title: 'Skin Rhythm',
+        sub: '角质的节奏',
+        body:
+          '没有夸张的前后对比，只有清晨的洗脸台、一瓶蓝色的精华，和按压三下的手。TAKAMI 把「坚持」拍成日式极简的一分钟：安静，但每天都会发生。',
+        meta: ['品牌企划', '2024 年度', '影像：东京 · 表参道'],
+        art: 'ripple'
+      }
+    },
+
+    /* ── 14 ───────────────────────────────────────────── */
+    {
+      id: 'carita',
+      no: '14',
+      en: 'CARITA',
+      cn: '凯芮塔',
+      category: '巴黎沙龙奢华护理',
+      origin: 'PARIS',
+      year: '1945',
+      colors: { bg: '#f3ede3', ink: '#1c1712', accent: '#a37d3f' },
+      emblem: 'carita',
+      motif: 'vendome',
+      tagline: '在旺多姆广场，美是一种被照顾的经验。',
+      intro:
+        '1945 年，Carita 姐妹在巴黎旺多姆广场开设 Maison Carita。她们把护肤、彩妆与发型放在同一个屋檐下，让「变美」成为一段被郑重接待的时间。2014 年，Carita 加入 L’Oréal Groupe。',
+      manifesto:
+        '真正的高定，不是让人看见你用了什么，而是让人看见你被好好对待过。',
+      quoteBy: 'MAISON CARITA · PARIS 1945',
+      facts: [
+        { k: '起源', v: '巴黎 · 1945' },
+        { k: '灵魂成分', v: '14 天焕活复合物 · 鱼子精华' },
+        { k: '代表系列', v: 'Fluide de Beauté 14 · La Crème' }
+      ],
+      products: [
+        {
+          cn: '14 天焕活精华',
+          en: 'Fluide de Beauté 14',
+          desc: '14 天密集护理，一支对应一天的用量。Carita 最经典的「美丽疗程」，把时间装进安瓶。',
+          size: '14 × 2 ML',
+          price: '¥ 1,680',
+          kind: 'dropper',
+          palette: { body: '#d9bd85', cap: '#1c1712', label: '#faf5ec', labelInk: '#1c1712', liquid: '#c9a45e' }
+        },
+        {
+          cn: '黑金面霜',
+          en: 'La Crème',
+          desc: '鱼子精华与胜肽，奢润紧致。黑色玻璃罐配金色边线，是梳妆台上最像珠宝的一件。',
+          size: '50 ML',
+          price: '¥ 3,280',
+          kind: 'jar',
+          palette: { body: '#1c1712', cap: '#b08d4f', label: '#1c1712', labelInk: '#d9bd85', liquid: '#2a2118' }
+        },
+        {
+          cn: '鱼子焕活面膜',
+          en: 'Masque Caviar',
+          desc: '鱼子提取物，急救式焕亮。重要场合前的十五分钟，把疲惫按回皮肤底下。',
+          size: '50 ML',
+          price: '¥ 1,280',
+          kind: 'tube',
+          palette: { body: '#f3ede3', cap: '#b08d4f', label: '#faf5ec', labelInk: '#1c1712', liquid: '#e6d7bd' }
+        }
+      ],
+      campaign: {
+        kicker: 'CAMPAIGN · HIVER 2024',
+        title: 'Maison Carita',
+        sub: '旺多姆的午后',
+        body:
+          '金色扶手、镜面、白色毛巾。Carita 不卖「成分」，卖的是被照顾的两个小时——在旺多姆广场，美从来不是一件匆忙的事。',
+        meta: ['品牌企划', '2024 秋冬', '影像：巴黎 · 旺多姆广场'],
+        art: 'vendome'
       }
     }
   ]

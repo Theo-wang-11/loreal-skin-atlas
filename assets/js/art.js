@@ -104,6 +104,20 @@
       <text x="60" y="56" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="26" font-weight="600" fill="currentColor" stroke="none">羽</text>
       <text x="60" y="84" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="26" font-weight="600" fill="currentColor" stroke="none">西</text>
       <path d="M32 92 H88" opacity=".45"/>
+    `,
+    droplet: `
+      <circle cx="60" cy="60" r="47" opacity=".2"/>
+      <path d="M60 14 C60 14 93 50 93 72 C93 91 78 105 60 105 C42 105 27 91 27 72 C27 50 60 14 60 14Z"/>
+      <path d="M60 43 C60 43 76 61 76 73 C76 84 69 91 60 91 C51 91 44 84 44 73 C44 61 60 43 60 43Z" opacity=".32"/>
+      <circle cx="60" cy="73" r="3.6" fill="currentColor" stroke="none"/>
+      <path d="M37 98 C43 94 49 102 55 98" opacity=".4"/>
+    `,
+    carita: `
+      <ellipse cx="60" cy="60" rx="44" ry="50"/>
+      <ellipse cx="60" cy="60" rx="36" ry="42" opacity=".2"/>
+      <text x="60" y="79" text-anchor="middle" font-family="'Bodoni Moda',serif" font-size="54" font-weight="400" fill="currentColor" stroke="none">C</text>
+      <path d="M60 4 V11 M60 109 V116 M8 60 H15 M105 60 H112" opacity=".4"/>
+      <path d="M60 22 l3.2 4.2 -3.2 4.2 -3.2 -4.2Z" fill="currentColor" stroke="none" opacity=".65"/>
     `
   };
 
@@ -137,7 +151,6 @@
     const productFull = (opts.product || '').toUpperCase();
     // keep the label legible: long names collapse to their first word
     const product = productFull.length > 13 ? productFull.split(' ')[0].slice(0, 13) : productFull;
-    const productLabel = product.length > 10 ? product.slice(0, 10) : product;
     const shortCap = brand.length > 15 ? brand.slice(0, 15) : brand;
 
     const defs = `
@@ -171,7 +184,9 @@
 
     const shadow = `<ellipse cx="100" cy="300" rx="58" ry="7" fill="#000" opacity=".13"/>`;
     const labelBlock = (x, y, w, h) => {
-      // fit the wordmark + product name inside the label, whatever its width
+      // narrow labels only take the first word; wider labels can hold the full name
+      const maxChars = w <= 52 ? product.split(' ')[0].length : w < 70 ? 9 : 12;
+      const productLabel = product.length > maxChars ? product.slice(0, maxChars).trim() : product;
       const bSize = Math.max(4.2, Math.min(7.2, (w - 12) / (shortCap.length * 0.8)));
       const bTrack = bSize > 6 ? 1.2 : 0.4;
       const pSize = Math.max(4.6, Math.min(9.2, (w - 10) / (productLabel.length * 0.72)));
@@ -230,9 +245,7 @@
         <rect x="66" y="262" width="68" height="22" rx="5" fill="url(#${uid}-cap)"/>
         <rect x="78" y="284" width="44" height="8" rx="4" fill="${shade(cap, -14)}"/>
         <rect x="72" y="112" width="8" height="142" rx="4" fill="url(#${uid}-gloss)" opacity=".6"/>
-        ${labelBlock(76, 152, 48, 90)}
-        <text x="100" y="232" text-anchor="middle" font-family="'Archivo',sans-serif" font-size="6.5"
-          letter-spacing="2" fill="${ink}" opacity=".55">${product.length > 18 ? product.slice(0, 18) : product}</text>`;
+        ${labelBlock(76, 152, 48, 90)}`;
     } else if (kind === 'jar') {
       art = `
         <rect x="48" y="168" width="104" height="112" rx="18" fill="url(#${uid}-body)"/>

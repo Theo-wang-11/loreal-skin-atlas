@@ -22,7 +22,9 @@
     biotherm: 'aquatic',
     'ysl-beauty': 'couture',
     'loreal-paris': 'bold',
-    'yue-sai': 'oriental'
+    'yue-sai': 'oriental',
+    takami: 'minimal',
+    carita: 'atelier'
   };
 
   const VESSEL_BRAND = {
@@ -43,7 +45,9 @@
     biotherm: "'Archivo', sans-serif",
     'ysl-beauty': "'Bodoni Moda', serif",
     'loreal-paris': "'Archivo Black', sans-serif",
-    'yue-sai': "'Cormorant Garamond', serif"
+    'yue-sai': "'Cormorant Garamond', serif",
+    takami: "'IBM Plex Sans', sans-serif",
+    carita: "'Bodoni Moda', serif"
   };
 
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -144,6 +148,8 @@
   }
 
   if (stage) {
+    const stageTotal = document.querySelector('.stage-total');
+    if (stageTotal) stageTotal.textContent = brands.length;
     paintStage(brands[0]);
     stageInner.classList.remove('is-out');
     document.querySelector('.row.is-active')?.classList.remove('is-active');
@@ -267,7 +273,7 @@
           </aside>
         </div>
         <div class="b-hero-foot">
-          <span>MAISON ${b.no} / 12</span><span class="b-line"></span><span>SCROLL TO EXPLORE</span>
+          <span>MAISON ${b.no} / ${brands.length}</span><span class="b-line"></span><span>SCROLL TO EXPLORE</span>
         </div>
       </header>
 
